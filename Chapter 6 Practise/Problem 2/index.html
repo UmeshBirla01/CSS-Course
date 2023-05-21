@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 | Problem 2</title>
+    <style>
+        .container{
+            min-height:100vh ;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        
+        .dots-wrapper{
+            display: flex;
+            gap:10px;
+        }
+
+        .dot{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            
+        }
+
+        .dot:nth-child(even){
+            background-color: #05ff00;
+            animation: evenLoading ease-in-out 1s infinite ;
+        }
+       
+        .dot:nth-child(odd){
+            background-color: red;
+            animation: oddLoading ease-in-out 1s infinite ;
+        }
+
+        @keyframes oddLoading {
+            0%,100%{
+                translate: 0 -50%;
+            }
+           
+            25%, 75%{
+                translate: 0 0%;
+            }
+
+            50%{
+                translate: 0 50%;
+            }
+        }
+
+        @keyframes evenLoading {
+            0%,100%{
+                translate: 0 50%;
+            }
+           
+            25%, 75%{
+                translate: 0 0%;
+            }
+
+            50%{
+                translate: 0 -50%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dots-wrapper">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

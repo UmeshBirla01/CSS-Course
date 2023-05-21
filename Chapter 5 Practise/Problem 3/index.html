@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 | Problem 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #EFC6AD;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card-container{
+            background-color: #472F2F;
+            width: 800px;
+            min-height: 350px;
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 8px 8px 30px rgb(2, 2, 2);
+        }
+
+        .text{
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text h1{
+            font-size: 64px;
+        }
+        
+        .text h2{
+            font-size: 32px;
+        } 
+        .image-container{
+            flex:1;
+        }
+
+        .image-container img {
+            height: 100%;
+            width: 400px;
+        }
+
+        .container{
+            /* position: relative; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .card-circle-container{
+            position: relative;
+        }
+        .circle{
+             position: absolute;
+             top: -100px;
+             left: -90px;
+             z-index: -1;
+        }
+        #line{
+             position:absolute;
+             z-index: -1;
+             width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="card-circle-container">
+        <img class="circle" src="./Circle.svg" alt="">
+        <div class="card-container">
+            <div class="text">
+               <h1>2023</h1>
+               <h2>Happy New Year</h2>
+            </div>
+            <div class="image-container">
+               <img src="./Image.png" alt="new year image">
+            </div>
+       </div>
+       </div>
+       <img id="line" src="./Line.svg" alt="">
+    </div>
+    
+   
+</body>
+</html>
